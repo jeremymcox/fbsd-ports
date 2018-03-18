@@ -1,9 +1,0 @@
-For HardenedBSD repo... 
-
-master branch based on HardenedBSD repo master branch. Do not modify.
-
-mycurrent branch based on master branch. Push changes here.
-
-plasma5-import branch based on master branch plus freebsd-ports-kde plasma5-import branch. There will probably be plenty of merge
-conflicts to resolve before this branch can begin testing. Or really more prudent to wait until it is pushed into FreeBSD's main 
-tree. 

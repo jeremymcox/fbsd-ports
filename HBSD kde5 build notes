@@ -1,0 +1,22 @@
+For HardenedBSD repo... 
+
+master branch based on HardenedBSD repo master branch. Do not modify.
+
+mycurrent branch based on master branch. Push changes here.
+
+plasma5-import branch based on master branch plus freebsd-ports-kde plasma5-import branch. There will probably be plenty of merge
+conflicts to resolve before this branch can begin testing. Or really more prudent to wait until it is pushed into FreeBSD's main 
+tree. 
+
+BTW... net/boinc-client does build on HardenedBSD, but it requires OPENSSL in the base system, or boinc-client needs to be patched to work
+with LibreSSL. Either way, for now it compiles with OPENSSL in the base. However, astro/boinc-setiathome does compile successfully on 
+HardenedBSD, but workunits error out with undefined symbol: attach_shmem from libboinc-api.so. 
+
+
+The merge of kde5-import branch into my import branch was shockingly easy thanks to the hard work of the KDE@ team integrating many of the
+ports into FreeBSD's ports tree. Now comes the hard part: determining what ports build, what won't build and what hardening features are 
+needed and/or work for each port. 
+
+I can now see I need to use poudriere for this, to help disect the build failures. I already had a build failure on 
+x11/kf5-plasma-framework. I need to determine if it was because it may require special patches to get it to work on HardenedBSD or if there
+are some misapplied hardening features on its port or a port it depends on to build. 
