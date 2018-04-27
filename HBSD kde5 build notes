@@ -20,3 +20,6 @@ needed and/or work for each port.
 I can now see I need to use poudriere for this, to help disect the build failures. I already had a build failure on 
 x11/kf5-plasma-framework. I need to determine if it was because it may require special patches to get it to work on HardenedBSD or if there
 are some misapplied hardening features on its port or a port it depends on to build. 
+
+Time to begin build trials for kde5 with poudriere. Merged kde5-import from freebsd-ports-kde kde5-import branch into my 
+hbsd-xserver119 branch (which is working very well, mesa build with llvm60 is also working well).
