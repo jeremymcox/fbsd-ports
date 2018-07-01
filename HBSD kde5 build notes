@@ -23,3 +23,6 @@ are some misapplied hardening features on its port or a port it depends on to bu
 
 Time to begin build trials for kde5 with poudriere. Merged kde5-import from freebsd-ports-kde kde5-import branch into my 
 hbsd-xserver119 branch (which is working very well, mesa build with llvm60 is also working well).
+
+A full plasma5 build was completed successfully based off of the hbsd-xserver119 branch. A few of the packages had to be used from the HBSD 
+repo since they do not build with poudriere with the frustrating rebuild with -fPIC error. Also, plasma5 won't run. 
