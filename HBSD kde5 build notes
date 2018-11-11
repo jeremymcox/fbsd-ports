@@ -28,4 +28,8 @@ A full plasma5 build was completed successfully based off of the hbsd-xserver119
 repo since they do not build with poudriere with the frustrating rebuild with -fPIC error. Also, plasma5 won't run. 
 
 Interesting note... FreeBSD 12 @ r340276 can run boinc-client x86_64 linux programs. I don't know what happened but it works
-with the 64 bit linuxulator now. Programs used to segfault before, but most of them (save one project so far) can run them. 
+with the 64 bit linuxulator now. 64 bit linux programs used to segfault before running thru the boinc-client, but most of them 
+(save one project so far) can run them. With the one project TN-Grid that doesn't work, it requires a newer version of glibc 
+than is provided by the emulators/linux-c6 packages, glibc 2.14. I can try and install linux-c7, but I will probably leave it 
+alone and not press my luck. Now I have to recreate (or find) the patch to allow boinc-client to recognize AVX and FMA and see 
+if those programs run with no issues. 
